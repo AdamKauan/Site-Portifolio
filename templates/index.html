@@ -10,7 +10,10 @@
     <title>Adam Kauan</title>
 </head>
 <body>
-    <aside id="header">
+
+  <i class="bi bi-list menu-mobile"></i>
+
+    <aside id='header'>
         <section class="profile">
             <img src="../static/img/profile.png" alt="Foto do Adam">
             <h1>Adam Kauan</h1>
@@ -30,41 +33,204 @@
         <nav id="navbar" class="nav-menu">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i>Inicio</a>
+                  <a class="nav-link active" aria-current="page" href="#inicio"><i class="bi bi-house"></i>Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-person"></i>Sobre</a>
+                  <a class="nav-link" href="#sobre"><i class="bi bi-person"></i> Sobre</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-list-ul"></i>Habilidades</a>
+                  <a class="nav-link" href="#habilidades"><i class="bi bi-list-ul"></i> Habilidades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i>Currículo</a>
+                    <a class="nav-link" href="#curriculo"><i class="bi bi-file-earmark-text"></i> Currículo</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-easel2"></i>Portifólio</a>
+                    <a class="nav-link" href="#portifolio"><i class="bi bi-easel2"></i> Portifólio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-envelope"></i>Contato</a>
+                    <a class="nav-link" href="#contato"><i class="bi bi-envelope"></i> Contato</a>
                   </li>
               </ul>
         </nav>
     </aside>
 
     <main id="main">
-      <section id="inicio" class="row m-0 p-0">
-        <div id="large-header" class="large-header">
-            <canvas id="demo-canvas"></canvas>
-            <h2 class="main-title">Adam Kauan<br>  
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script><span class="thin">Desenvolvedor Fullstack</span></h2>
-          <div id="arraste-para-mais" class="arraste-para-mais  d-flex align-items-center">
-              <i class="bi bi-arrow-down text-white pe-2 fs-2"></i>
-              <a href="">Arraste para mais</a>
+      
+    <section id="inicio" class="row m-0 p-0">
+        <div class="col-md-7 d-flex justify-content-center align-items-center flex-column ps-lg-5">
+            <h2 class="text-white text-shadow">Adam Kauan</h2>
+            <span id="subtittle" class="text-white text-shadow">Desenvolvedor Fullstack<span>     
+        </div> 
+
+        <div class="col-md-12 d-flex justify-content-end align-items-end">
+            <div id="arraste" class="d-flex align-items-center">
+                 <i class="bi bi-arrow-down text-white pe-2 fs-2"></i>
+                 <a href="#sobre">Arraste para mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5" id="sobre">
+        <div class="row w-100">
+            <div class="col-md-12">
+                <h2 class='pt-3'>Sobre</h2>
+                <p>Com uma curiosidade inata e uma trajetória predominantemente autodidata, desenvolvi um nível avançado de inglês de forma independente, refletindo meu entusiasmo constante pelo aprendizado. Desde a infância, sou movido por uma sede insaciável de conhecimento, especialmente na tecnologia.</p>
+
+                <p>A tecnologia não é apenas uma área de interesse para mim; ela é uma parte integrante da minha vida. Influenciado pelo meu pai, um engenheiro de dados com mais de duas décadas de experiência, cresci imerso em um ambiente que naturalmente cultivou meu fascínio pelo campo de TI. As lições que ele compartilhou ao longo dos anos não apenas enriqueceram meu entendimento, mas também aguçaram meu desejo de seguir uma carreira em tecnologia da informação.</p>
             </div>
         </div>
 
-      </section>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                 <img class="img-fluid shadow" src="../static/img/Foto perfil2.jpg" alt="Foto do Adam">
+            </div>
+            <div class="col-md-8 mt-2">
+                <h3>Desenvolvedor Fullstack</h3>
+                <p>Minha jornada como dev começou do jeito clássico: encarando o mundo colorido do Front-End, onde aprendi a criar interfaces que não só chamam a atenção, mas também facilitam a vida de quem usa. Com o tempo, essa base sólida me levou a explorar os territórios mais profundos do Back-End. Hoje, transito com naturalidade entre esses dois mundos, aplicando minha curiosidade e paixão para desenvolver soluções completas. Meu código conecta o visual com o funcional.</p>
 
+                <div class="row mt-3 mb-3">
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush fs-6">
+                            <li class="list-group-item fw-semibold">
+                              Aniversário: <span class="fw-lighter">23 de fev de 2004</span>
+                            </li>
+                            <li class="list-group-item fw-semibold">
+                              Idade: <span class="fw-lighter">20 anos</span>
+                            </li>
+                            <li class="list-group-item fw-semibold">
+                              Cidade: <span class="fw-lighter">Brasília</span>
+                            </li>
+                            <li class="list-group-item fw-semibold">
+                              Estado: <span class="fw-lighter">Distrito Federal</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush fs-6">
+                            <li class="list-group-item fw-semibold">
+                              Hobby: <span class="fw-lighter">Catan(jogo de tabuleiro)</span>
+                            </li>
+                            <li class="list-group-item fw-semibold">
+                              Trabalho atual: <span class="fw-lighter">-</span>
+                            <li class="list-group-item fw-semibold">
+                              Experiência: <span class="fw-lighter">universitário desde 2022</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>Quanto mais me aprofundo nos estudos, mais me encanto com a capacidade transformadora da tecnologia. Ela molda nossa comunicação, redefine nosso cotidiano e simplifica inúmeras tarefas diárias. Estou comprometido em explorar e contribuir para esse universo tão vasto, onde a inovação é a norma e as possibilidades são infinitas.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 section-bg" id="habilidades">
+
+        <div class="container pb-5">
+            <h2 class='pt-5'>Habilidades</h2>
+            <p>Ao longo da minha jornada em estudos e projetos de tecnologia, tive a oportunidade de desenvolver um conjunto de habilidades, tanto técnicas quanto interpessoais. Acredito que estas habilidades, listadas abaixo, representam meu nível atual de conhecimento em cada área, de acordo com a porcentagem que eu acredito ter em cada uma delas.</p>
+            <p>Esses números representam meu progresso atual, mas estou constantemente buscando aprimorar minhas habilidades e me manter atualizado com as últimas tendências em tecnologia.</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                      <p class="mt-3 mb-0">Python</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 76%">76%</div>
+                      </div>
+        
+                      <p class="mt-3 mb-0">SQL</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 74%">74%</div>
+                      </div>
+
+                      <p class="mt-3 mb-0">HTML</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 70%">70%</div>
+                      </div>
+      
+                      <p class="mt-3 mb-0">CSS</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 69%">69%</div>
+                      </div>
+      
+                      <p class="mt-3 mb-0">JavaScript</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 69%">69%</div>
+                      </div>
+                </div>
+
+                <div class="col-md-6">
+                      <p class="mt-3 mb-0">Flask</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 76%">76%</div>
+                      </div>
+
+                      <p class="mt-3 mb-0">Bootstrap</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 69%">69%</div>
+                      </div>
+
+                      <p class="mt-3 mb-0">Pacote Office 365</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 95%">95%</div>
+                      </div>
+
+                      <p class="mt-3 mb-0">Power BI</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 82%">82%</div>
+                      </div>
+
+                      <p class="mt-3 mb-0">Inglês</p>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar bg-success" style="width: 93%">93%</div>
+                      </div>
+                </div>
+
+            </div>
+
+            <hr class='w-50 me-auto ms-auto'>
+            
+            <div class="row">
+                <div class="col-md-6">
+
+                    <p class="mt-3 mb-0">Habilidade analítica</p>
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar" style="width: 80%">80%</div>
+                    </div>
+
+                    <p class="mt-3 mb-0">Trabalho em Equipe</p>
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 95%">95%</div>
+                    </div>
+                  
+                      <p class="mt-3 mb-0">Comprometimento</p>
+                      <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar" style="width: 100%">100%</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+  
+                    <p class="mt-3 mb-0">Capacidade de aprendizado</p>
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 90%">90%</div>
+                    </div>
+              
+                    <p class="mt-3 mb-0">Capacidade de organização</p>
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 93%">93%</div>
+                    </div>
+
+                    <p class="mt-3 mb-0">Curiosidade</p>
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 98%">98%</div>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
     </main>
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/script.js"></script>
