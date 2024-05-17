@@ -182,5 +182,70 @@ i.menu-mobile {
 }
 
 .section-bg{
-    background-color: #f4fff8
+    background-color: #effff5
 }
+
+.cv .cv-tittle{
+    font-size: 600;
+    font-weight: 580;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #140518;
+}
+
+.cv .cv-itens{
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #12b844;
+    position: relative;
+}
+
+.cv .cv-itens h4{
+    line-height: 18px;
+    font-weight: 200;
+    font-family: sans-serif;
+    color: #0b0411;
+    margin-bottom: 10px;
+}
+
+.cv .cv-itens h5{
+    background: #e7f0fc;
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 600;
+    margin-bottom: 10px;
+}
+
+.cv .cv-itens::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #12b844;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.carousel-control-prev{
+    margin-bottom: -15rem;
+}
+
+.carousel-control-next{
+    margin-bottom: -15rem;
+}
+
+.carousel-indicators{
+    margin-bottom: -35px;
+}
+
+@media(max-width: 940px) {
+    .carousel-control-next{
+        margin-bottom: -26rem;
+    }
+
+    .carousel-control-prev{
+        margin-bottom: -26rem;
+    }
+    }
