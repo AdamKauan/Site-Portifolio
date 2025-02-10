@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Contatos</title>
+    <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Relatório de Contatos</h2>
+        
+        <!-- Mensagens Flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="mb-4">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <!-- Tabela de Contatos -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mensagem</th>
+                        <th scope="col">Data de Envio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for contato in contatos.items %}
+                        <tr>
+                            <td>{{ contato.id }}</td>
+                            <td>{{ contato.nome }}</td>
+                            <td>{{ contato.email }}</td>
+                            <td>{{ contato.mensagem }}</td>
+                            <td>{{ contato.data_envio.strftime('%d/%m/%Y %H:%M:%S') }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botão de Logout -->
+        <div class="mt-4">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Sair</a>
+        </div>
+
+        <!-- Navegação de Paginação -->
+        <div class="mt-4 d-flex justify-content-between">
+            <div>
+                <a href="{{ url_for('relatorio', page=contatos.prev_num) }}" class="btn btn-secondary" {% if not contatos.has_prev %}disabled{% endif %}>Anterior</a>
+                <a href="{{ url_for('relatorio', page=contatos.next_num) }}" class="btn btn-secondary" {% if not contatos.has_next %}disabled{% endif %}>Próxima</a>
+            </div>
+            <div>
+                <span>Página {{ contatos.page }} de {{ contatos.pages }}</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -55,6 +55,9 @@
     </aside>
 
     <main id="main">
+        <div class="login-container">
+            <a href="/login" class="btn btn-primary">Login</a>
+        </div>
       
     <section id="inicio" class="row m-0 p-0">
         <div class="col-md-7 d-flex justify-content-center align-items-center flex-column ps-lg-5">
@@ -380,11 +383,11 @@
 
         <div class="container mb-5">
             <h2 class='pt-3 pb-3'>Contato</h2>
-
+    
             <div class="row">
-
+    
                 <div class="col-md-5">
-
+    
                     <div class="card p-5 shadow border-0" data-anime="up">
                         <div class="endereco">
                             <h4><i class="bi bi-geo-alt"></i> Localização:</h4>
@@ -394,40 +397,54 @@
                             <h4><i class="bi bi-envelope"></i> Email:</h4>
                             <p>adamkauan04@gmail.com</p>
                         </div>
-
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12916.326463374402!2d-47.855712934328324!3d-15.748661581948964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3bf43f8ff821%3A0x23c9c170c22ea8a7!2sSt.%20de%20Habita%C3%A7%C3%B5es%20Individuais%20Norte%20QI%2012%20-%20Lago%20Norte%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1715968738258!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"  class='w-100'  referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12916.326463374402!2d-47.855712934328324!3d-15.748661581948964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3bf43f8ff821%3A0x23c9c170c22ea8a7!2sSt.%20de%20Habita%C3%A7%C3%B5es%20Individuais%20Norte%20QI%2012%20-%20Lago%20Norte%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1715968738258!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" class='w-100' referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+    
                 <div class="col-md-7 mt-5 mt-md-0" data-anime="right">
-
+    
+                    <!-- Mensagens Flash -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <div class="mb-4">
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                        {{ message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+    
                     <div class="card p-5 h-100 shadow border-0">
-                        <form class="row g-3">
+                        <form class="row g-3" action='/send' method="POST">
                             <div class="col-md-6">
                                 <label for="nome" class="form-label">Nome:</label>
-                                <input type="text" class="form-control" id="nome" name='nome' placeholder="digite seu nome">
+                                <input type="text" class="form-control" id="nome" name='nome' placeholder="Digite seu nome" required>
                             </div>
-
+    
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email:</label>
-                                <input type="email" class="form-control" id="email" name='email' placeholder="digite seu email">
+                                <input type="email" class="form-control" id="email" name='email' placeholder="Digite seu email" required>
                             </div>
-
+    
                             <div class="col-12">
                                 <label for="mensagem" class="form-label">Mensagem:</label>
-                                <textarea type="text" class="form-control" id="mensagem" name='mensagem' rows="10" placeholder="Digite sua mensagem"></textarea>
+                                <textarea type="text" class="form-control" id="mensagem" name='mensagem' rows="10" placeholder="Digite sua mensagem" required></textarea>
                             </div>
-                            
+    
                             <div class="col-12 d-flex justify-content-center mt-4">
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>    
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
+    
     </main>
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/script.js"></script>

@@ -21,6 +21,18 @@ navItem.forEach(item => {
     })
 })
 
+// Botão de login
+const loginButton = document.querySelector('.login-container');
+
+// Esconder o botão após o scroll
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {  // Quando a página for rolada mais de 50px
+        loginButton.style.display = 'none';  // Esconde o botão
+    } else {
+        loginButton.style.display = 'block';  // Mostra o botão novamente
+    }
+});
+
 // Animar itens data-anime
 
 const item = document.querySelectorAll("[data-anime]");

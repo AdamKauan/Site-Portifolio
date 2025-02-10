@@ -282,3 +282,28 @@ i.menu-mobile {
         transform: translate3d(0, 100px, 0);
     }
 }
+
+/* Estilização do botão de login */
+.login-container {
+    position: fixed;
+    top: -10px;
+    right: 60px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #31013e;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container .btn:hover {
+    background-color: #4b8135;
+    color: #ffffff;
+    border: 2px solid #31013e;
+}
